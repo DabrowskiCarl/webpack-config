@@ -12,7 +12,9 @@
 By default server start on port `3000`.
 
 ## App config
-* The file `app.config.js` is defined in root directory. It consists of things related to environment like API urls, Client IDs for OAuth etc. Its not bundled with other scripts, as this makes it easier to populate it across different environments during CI/CD process
+* The file `app.config.js` should defined in root directory.
+* See `app.config.js.dist` to see how it should look like
+* It consists of things related to environment like API urls, Client IDs for OAuth etc. Its not bundled with other scripts, as this makes it easier to populate it across different environments during CI/CD process
 * **IMPORTANT**: keep the file synchronized with type definition located in `/types/appConfig.d.ts`
 
 ## Change server port 
@@ -41,8 +43,8 @@ in `/dist` directory you have prod version.
 
 **Watch out!**
 
-In directory `/dist` does not exist app main config file (`/app.config.js`). 
-Create this file is job for you *CI* 
+App main config file (`/app.config.js`) does not exist in directory `/dist`. 
+Providing this file is job for you *CI*
 
 ## Build feature
 
