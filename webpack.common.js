@@ -19,7 +19,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
-    publicPath: './',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -60,11 +60,11 @@ const config = {
     new HtmlStringReplace({
       patterns: [
         {
-          match: /src=".\/app\.config\.js"/g,
+          match: /src="\/app\.config\.js"/g,
           replacement: function (match) {
             const timestamp = +new Date();
 
-            return 'src="./app.config.js?hash=' + timestamp + '"';
+            return 'src="/app.config.js?hash=' + timestamp + '"';
           }
         },
       ]
